@@ -13,10 +13,10 @@ public class CEnemy
 
     public CEnemy(string name, int hp, int atk, int gold)
     {
-        this.Name = name;
-        this.Hp = hp;
-        this.Atk = atk;
-        this.Gold = gold;
+        Name = name;
+        Hp = hp;
+        Atk = atk;
+        Gold = gold;
 
         MaxHp = hp;
 

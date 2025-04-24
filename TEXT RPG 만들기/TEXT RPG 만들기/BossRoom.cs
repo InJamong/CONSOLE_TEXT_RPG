@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TEXT_RPG_만들기
 {
-    internal class BossRoom
+    internal class Bossroom
     {
     }
 }

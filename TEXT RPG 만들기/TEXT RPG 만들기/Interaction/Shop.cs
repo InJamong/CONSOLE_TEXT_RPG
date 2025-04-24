@@ -20,13 +20,13 @@ namespace Shop
         public void ItemSetUp()
         {
             AddNewItem(ITEM_TYPE.ARMOR, "가죽 갑옷", "가죽으로 만든 갑옷", "10", 500);
-            AddNewItem(ITEM_TYPE.ARMOR, "철 갑옷", "철로 만든 갑옷", "20", 1500);
+            AddNewItem(ITEM_TYPE.ARMOR, "철 갑옷", "철로 만든 갑옷", "20", 5000);
             AddNewItem(ITEM_TYPE.ARMOR, "망자의 갑옷", "망자의 영혼으로 만든 갑옷", "40", 8000);
-            AddNewItem(ITEM_TYPE.ARMOR, "용 갑옷", "용의 비늘로 만든 갑옷", "100", 10000);
+            AddNewItem(ITEM_TYPE.ARMOR, "용 갑옷", "용의 비늘로 만든 갑옷", "100", 20000);
             AddNewItem(ITEM_TYPE.WEAPON, "나무 검", "나무로 만든 검", "10", 500);
-            AddNewItem(ITEM_TYPE.WEAPON, "철 검", "철로 만든 검", "20", 1500);
+            AddNewItem(ITEM_TYPE.WEAPON, "철 검", "철로 만든 검", "20", 5000);
             AddNewItem(ITEM_TYPE.WEAPON, "망자의 검", "망자의 영혼으로 만든 검", "40", 8000);
-            AddNewItem(ITEM_TYPE.WEAPON, "용살자의 검", "용을 죽인 자의 검", "100", 10000);
+            AddNewItem(ITEM_TYPE.WEAPON, "용살자의 검", "용을 죽인 자의 검", "100", 20000);
             AddNewItem(ITEM_TYPE.POTION, "소형 HP포션", "HP를 소량 회복한다", "30", 500);
             AddNewItem(ITEM_TYPE.POTION, "소형 MP포션", "MP를 소량 회복한다", "30", 500);
             AddNewItem(ITEM_TYPE.POTION, "대형 HP포션", "HP를 대량 회복한다", "70", 1000);
@@ -47,11 +47,7 @@ namespace Shop
         bool ShopLoop = true;
         public void ShowShopMenu(CPlayer player)
         {
-
-
-           
-
-            while (ShopLoop)
+            //while (ShopLoop)
             {
                 Console.Clear();
                 Console.WriteLine("상점에 오신 걸 환영합니다.");
@@ -64,16 +60,7 @@ namespace Shop
 
 
                 int ChoiceMenu = int.Parse(Console.ReadLine());
-                /*if (ChoiceMenu == 0)
-                {
-                    Console.WriteLine("상점에서 나갑니다.");
-                    ShopLoop = false;
-                    Console.WriteLine("상점 종료 했다아아 break 걸어~");
-                    Thread.Sleep(1000);
 
-                    break;
-                }
-                else*/
                     switch ((SHOP_MENU)ChoiceMenu)
                     {
                         case SHOP_MENU.ARMOR:

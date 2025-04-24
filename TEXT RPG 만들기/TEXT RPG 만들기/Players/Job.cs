@@ -44,4 +44,18 @@ namespace Job
         }
 
     }
+    public class Ccheat : CJob
+    {
+        public Ccheat()
+        {
+            JobName = "Cheat";
+            BaseHp = 100000;
+            BaseMp = 100000;
+            BaseAtk = 2000;
+            BaseDef = 2000;
+            Skill.Add(new CSkill("cheat 1", 10, 50));
+            Skill.Add(new CSkill("cheat 2", 13, 80));
+            Skill.Add(new CSkill("chaet 3", 20, 200));
+        }
+    }
 }

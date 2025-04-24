@@ -71,17 +71,18 @@ namespace Player
                         Console.WriteLine($"{EquippedArmor.Name}을(를) 해제했습니다");
                         Console.WriteLine($"{EquippedArmor.Name}을(를) 판매했습니다");
                         player.Gold += EquippedArmor.Price / 2;
-
-
-                        break;
+                        
                     }
-                    else
-                    {
-                        EquippedArmor = item;
-                        Def += int.Parse(item.AbilityValue);
-                        Console.WriteLine($"{item.Name}장착! 방어력 {item.AbilityValue}만큼 증가");
-                        break;
-                    }
+                    
+                    EquippedArmor = item;
+                    Def += int.Parse(item.AbilityValue);
+                    Console.WriteLine($"{item.Name} 장착! 방어력 {item.AbilityValue}만큼 증가");
+
+                    Console.WriteLine($"현재 장착 방어구: {EquippedArmor.Name}, 능력치: {EquippedArmor.AbilityValue}");
+                    break;
+
+                        
+                    
 
                 case ITEM_TYPE.WEAPON:
                     if (EquippedWeapon != null)
@@ -90,14 +91,15 @@ namespace Player
                         Console.WriteLine($"{EquippedWeapon.Name}을(를) 해제했습니다");
                         Console.WriteLine($"{EquippedWeapon.Name}을(를) 판매했습니다");
                         player.Gold += EquippedWeapon.Price / 2;
-                        break;
+               
                     }
-                    else
-                    {
-                        Atk += int.Parse(item.AbilityValue);
-                        Console.WriteLine($"{item.Name}장착! 공격력 {item.AbilityValue}만큼 증가");
-                        break;
-                    }
+                    
+                     EquippedWeapon = item;
+                     Atk += int.Parse(item.AbilityValue);
+                     Console.WriteLine($"{item.Name} 장착! 공격력 {item.AbilityValue}만큼 증가");
+                     Console.WriteLine($"현재 장착 무기: {EquippedWeapon.Name}, 능력치: {EquippedWeapon.AbilityValue}");
+                     break;
+               
 
             }
         }

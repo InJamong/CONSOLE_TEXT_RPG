@@ -1,9 +1,9 @@
-﻿using Enemy;
-using Player;
+﻿using Player;
 using Enums;
 using EnemyManager;
 using Battle;
-using System.Threading; //Thread Sleep 사용하기 위해서는 무조건 있어야함.
+using System.Threading;
+using Enemy; 
 
 
 namespace Dungeon
@@ -18,7 +18,6 @@ namespace Dungeon
         {
             this.player = player;
             enemyManager = new CEnemyManager();
-
         }
         private void StartDungeonbattle(DUNGEON_DIFFICULTY difficultyLevel)
         {
@@ -51,17 +50,24 @@ namespace Dungeon
                     Console.Clear();
                     // 미니맵으로 돌아가는 함수 넣어야함.
                 }
-
-
             }
         }
         public void EnterDungeon()
         {
             Console.WriteLine("던전에 입장하셨습니다.");
             Console.WriteLine("난이도를 선택해주세요: 1.이지 2.노멀 3.하드 4.나가기");
-            int diff = int.Parse(Console.ReadLine());
-            
-           
+            string input = Console.ReadLine();
+            if (!int.TryParse(input, out int diff))
+            {
+                Console.WriteLine("숫자를 입력해주세요!");
+                Thread.Sleep(1000);
+                Console.Clear();
+
+
+                return;
+            }
+
+
             switch (diff)
             {
                 case 1:
@@ -77,14 +83,13 @@ namespace Dungeon
                     Console.WriteLine("던전에서 나갑니다.");
                     Console.Clear ();
                     break;
+                default:
+                    Console.WriteLine("잘못된 입력입니다");
+                    Console.ReadKey();
+                    Console.Clear();
+                    break;
 
             }
         }
-
-
-
-
-
     }
-
 }

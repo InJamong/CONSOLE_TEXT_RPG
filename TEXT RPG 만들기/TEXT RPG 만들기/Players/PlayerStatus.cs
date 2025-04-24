@@ -25,14 +25,14 @@ namespace ShowPlayerStatus
             {
                 Console.WriteLine("장착중인 방어구 :");
             }
-            if (player.EquippedArmor != null)
+            if (player.EquippedWeapon != null)
             {
                 Console.WriteLine($"장착 중인 무기: {player.EquippedWeapon.Name}");
 
             }
             else
             {
-                Console.WriteLine("장착중인 무기 :");
+                Console.WriteLine($"장착중인 무기 :");
             }
             Console.WriteLine("==============================");
         }

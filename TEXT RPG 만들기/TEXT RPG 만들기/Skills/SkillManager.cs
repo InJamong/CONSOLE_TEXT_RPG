@@ -1,7 +1,7 @@
 ﻿using Skill;
 using Player;
-using Enemy;
 using Battle;
+using Enemy;
 namespace SkillManager
 
 {
